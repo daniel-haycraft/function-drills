@@ -23,15 +23,22 @@
 
 //CODE HERE
 
+function helloWorld(){
+  return 'Hello, World'
+}
+console.log(helloWorld())
 
 ////////////////// PROBLEM 2 ////////////////////
 
 /*
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
-
+// DON'T FORGET TO PUT THE () AFTER FUNCTIONS EVEN IF THERE ARE NO PARAMETERS
 //CODE HERE
-
+let jsNinja = () => {
+  return  "I am a JavaScript ninja"
+}
+console.log(jsNinja())
 
 
 
@@ -43,8 +50,10 @@
 */
 
 //CODE HERE
-
-
+let printName = () => {
+  return "Garret"
+}
+console.log(printName())
 ////////////////// PROBLEM 4 ////////////////////
 /*
   Create a function called greeting that
@@ -56,7 +65,10 @@
 */
 
 //CODE HERE
-
+function greeting(name){
+  return 'hello ' + name
+}
+console.log(greeting('puppytins'))
 
 ////////////////// PROBLEM 5 ////////////////////
 
@@ -68,10 +80,25 @@
 
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
+// i don't like the tenary statement for this one because it hold little to no siginificance 
+// i wouldn't use a tenary because i need set values.
+// its useful if i needed that but as of now i can set it to the side until it becomes practical
 
 //CODE HERE
+let compareNums = (num1, num2) =>{
+  if (num1 > num2){
+    return num1
+  } else {
+    return num2
+  }
+}
+
+// condition ? exprIfTrue : exprIfFalse
+// function is considered an if statement with one parameter
 
 
+
+console.log(compareNums(1, 2))
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Create a function called add that takes in two parameters 
@@ -96,7 +123,7 @@ const exclaim = function(str) {
 
 // console.log('arrow')
 // console.log('declaration')
-// console.log('expression')
+console.log(exclaim('expression'))
 
 
 
@@ -111,7 +138,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log(exclaimTwo('arrow'))
 // console.log('declaration')
 // console.log('expression')
 
@@ -121,8 +148,9 @@ const exclaimTwo = str => {
 
   Brownie points if you use a template string
 */
+const exclaimThree = (str) => str.toUpperCase() + '!!!'
 
-
+console.log(exclaimThree("chickens"))
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -136,7 +164,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -150,7 +178,19 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name){
+  if (name === 'Steven' || name === 'steven') {
+  return "Whats up " + name
+  } else if (name ===  'Bryan' || name === 'bryan') {
+  return "Hey " + name
+  } else {
+    return 'cool name ' + name
+  }
 
+}
+
+const nameGreeting = nameCheck('Steven')
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
@@ -163,6 +203,21 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+// condition ? exprIfTrue : exprIfFalse
+
+function faveColorFinder(color){
+  if (color === 'red'){
+    return color + ' red sucks though'
+  } else if (color === 'green'){
+    return color + ' i mean its no blue'
+  } else if (color === 'black'){
+    return color + ' ugh white or black, sorry not a considered color!'
+  } else {
+    return 'you need to evaluate your favorite color choice, unless its blue, that shits fire'
+  }
+}
+let colorRating = faveColorFinder('blue')
+console.log(colorRating)
 
 
 ////////////////// PROBLEM 12 ////////////////////
